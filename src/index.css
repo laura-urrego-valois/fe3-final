@@ -1,44 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-h1{
-  text-align: center;
-}
-
-nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
-}
-
-a{
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Lato", sans-serif, monospace;
+}
 
 footer {
   display: flex;
@@ -47,63 +33,80 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
+  /*width: 90%;*/
+  height: 35%;
   margin-top: 2rem;
 }
 
-footer > img{
+footer > img {
   width: 200px;
   margin: 0;
 }
-footer > p{
+footer > p {
   margin: 0;
   padding-top: 0.7rem;
 }
 
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
-  height: 100px;
+  height: 37vh;
   margin: 0 auto;
 }
 
-.card{
+form label {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1rem;
+}
+
+form input {
+  height: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+h4,
+h5 {
+  color: black;
+}
+
+main {
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
-
-.card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
-}
-
-.card-grid{
-  display: flex;
   justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1rem;
+  height: 13vh;
+}
+
+nav button {
+  border: none;
+  background: fixed;
+  font-size: 1.1rem;
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
@@ -113,10 +116,121 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 90vw;
+}
+
+.card-detail img {
+  height: 40%;
+  width: 40%;
+}
+
+.card:hover {
+  border: 0.5px solid rgb(206, 217, 142);
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  height: fit-content;
+  margin: 0;
+}
+
+.card-grid div {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: small;
+  padding: 0;
+}
+
+.card-grid div h5 {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.card-grid img {
+  height: 55%;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.favButton {
+  background-color: #8386ff;
+  font-weight: 700;
+  padding: 10px;
+  border: black;
+  border-radius: 10px;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.fav-dentists {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dark {
   background-color: #12121296;
   color: white;
 }
 .dark > a {
   color: white;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.light > a {
+  color: #000000;
+}
+
+
+.send-button {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.theme-button {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
 }
